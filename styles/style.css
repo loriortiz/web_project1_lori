@@ -3,12 +3,21 @@ body, h1, h2, h3, h4, p, a {
   font-size: 100%;
 }
 
-a {
-    color: #2f80ed;
-}
-
 * {
   box-sizing: border-box;
+}
+
+ul {
+  padding-left: 0;
+}
+
+.more {
+    color: #2f80ed;
+    text-decoration: none;
+}
+.mute {
+  color: #4f4f4f;
+  text-decoration: none;
 }
 
 body {
@@ -46,7 +55,6 @@ body {
   display: flex;
   width: 730px;
   margin-left: 64px;
-  
   color: #000;
   align-self: center;
   font-size: 102px;
@@ -60,11 +68,13 @@ body {
   width: 154px;
   height: 31px;
 }
+
 .logo__place_header {
   background-image: url(../images/logo.png);
   top: 30px;
   left: 64px;
 }
+
 .header__subtitle {
   display: inline-block;
   position: absolute; 
@@ -113,14 +123,12 @@ body {
   width: 80%;
   margin-top: 100px;
   align-self: center;
-
-  
 }
+
 .two-columns {
   display: flex;
-  
-  
 }
+
 .two-columns__brief {
   order: 1;
   width: 175px;
@@ -144,25 +152,26 @@ body {
   padding-bottom: 30px;
 }
 
-.digits {
+.section {
   display: flex;
   order: 2;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
   align-self: center;
   align-items: center;
 }
 
-.digits__title {
+.section__title {
   margin-top:100px;
   width: 60%;
   order: 1;
   text-align: center;
   line-height: 69px;
   font-size: 60px;
+  z-index: 1;
 }
 
-.digits__subtitle {
+.section__subtitle {
   margin-top:20px;
   display: inline-block;
   width: 60%;
@@ -170,32 +179,39 @@ body {
   text-align: center;
   line-height: 34px;
   font-size: 24px;
+  z-index: 1;
 }
 
-.digits-table {
+.table {
   width: 1100px;
   display: flex;
   flex-direction: column;
   order: 3;
   justify-items: center;
+  z-index: 1;
 }
 
-.digits-table__heading {
-  line-height: 1.15em;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.digits-table__row {
+.table__row {
   margin-top: 60px;
   display: flex;
   justify-content: space-evenly;
 }
 
-.digits-table__cell {
+.table__cell {
   line-height: 1.2em;
   font-size: 18px;
   width: 250px;
+}
+
+.table__heading {
+  line-height: 1.15em;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.table__text {
+  margin-top: 20px;
+  
 }
 
 .feynman {
@@ -227,6 +243,7 @@ body {
 
 .feynman__link {
   color: #000;
+  text-decoration: none;
   font-size: 36px;
   line-height: 51px;
   position: absolute;
@@ -235,15 +252,109 @@ body {
 }
 
 /* including elements with key-value modifiers */
-.table__cell_theme_dark {
-  width: 200px;
-  color: white;
-  margin-right: 0;
-  margin-top: 80px;
+.section_theme_dark {
+  display: flex;
+  order: 4;
+  padding-bottom: 90px;
+  color:white;
+  background-color: #000;
+  overflow: hidden;
 }
 
-.logo__place_footer {
-  background-image: url(../images/logo_white.png);
-  bottom: 0;
-  left: 0;
+.section__title_theme_dark {
+  margin-top:90px;
 }
+
+.section__triangle {
+  width: 877px;
+  height: 877px;
+  position: absolute;
+  background: url(../images/triangle.svg) no-repeat;
+  z-index: 0; 
+  right: 0;
+}
+
+.table__cell_theme_dark {
+  width: 200px;
+}
+
+.footer {
+  display: flex;
+  order: 5;
+  background-color: #000;
+  color: white;
+  width: 100%;
+  min-height: 350px;
+  padding-top: 90px;
+}
+
+.footer__columns {
+  width: 90%;
+  display: flex;
+  margin: 40px auto 60px;
+  justify-content: space-around;
+}
+
+.footer__column_left {
+  display: flex;
+  flex-flow: column wrap;
+  order: 1;
+  flex-basis: 711px;
+  justify-content: space-between;
+}
+
+.footer__logo {
+  order: 1;
+/*   background-size: contain; */
+  width: 183px;
+  height: 38px;
+  background: url(../images/logo_white.png) no-repeat;
+}
+
+.footer__author {
+  order: 2;
+  color: #1f1f1f;
+  margin-bottom: 18px;
+  line-height: 20px;
+  font-size: 18px;
+}
+
+.footer__menu_info {
+  display: flex;
+  order: 2;
+  flex-flow: column nowrap;
+}
+
+.footer__menu_social {
+  display: flex;
+  order: 3;
+  flex-flow: column nowrap;
+  font-size: 16px;
+}
+
+.footer__menu_text_social:first-of-type {
+  list-style-image: url(../images/facebook_white.svg);
+}
+
+.footer__menu_text_social:nth-child(2n) {
+  list-style-image: url(../images/instagram_white.svg);
+}
+
+.footer__menu_title {
+  line-height: 45px;
+  font-size: 18px;
+  font-weight: bold;
+  
+}
+
+.footer__menu_text {
+  margin-top: 20px;
+  margin-left: 2px;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.footer__menu_text_social {
+  margin-left: 25px;
+}
+
